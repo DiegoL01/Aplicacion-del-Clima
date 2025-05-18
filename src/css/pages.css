@@ -1,0 +1,83 @@
+.paginaPrincipal {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('src/img/download.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.paginaPrincipal h1 {
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 2rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.paginaPrincipal h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #00b4db, #0083b0);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* Ejemplo de pseudo-elementos y pseudo-clases */
+
+/* 1. Efecto hover con ::before */
+
+
+/* 2. Efecto decorativo con ::after */
+.paginaPrincipal h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #00b4db, #0083b0);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* 3. Animación al hover */
+.paginaPrincipal h1:hover::after {
+    width: 200px;
+}
+
+/* 4. Estilo primera letra */
+.paginaPrincipal h1::first-letter {
+    font-size: 4.5rem;
+    color: #00b4db;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* 5. Estilo al seleccionar texto */
+.paginaPrincipal h1::selection {
+    background: #00b4db;
+    color: white;
+}
+
+/* Optimización para dispositivos móviles */
+@media (max-width: 768px) {
+    .paginaPrincipal {
+        background-attachment: scroll;
+    }
+}
